@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "rewrites": [
+ { "source": "/crunchyroll/(.)", "destination": "/api/proxy" },
+ { "source": "/(.)", "destination": "/index.html" }
+  ]
+}
