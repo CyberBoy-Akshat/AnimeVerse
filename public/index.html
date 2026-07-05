@@ -9,9 +9,9 @@
  <ul id="video-list"></ul>
 
  <script id="video-script">
- fetch('/data.json')
- .then(response => response.json())
- .then(data => {
+fetch('/api/data')
+  .then(response => response.json())
+  .then(data => {
  const videoListElement = document.getElementById('video-list');
  
  data.forEach(videoUrl => {
