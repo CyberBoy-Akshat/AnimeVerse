@@ -15,3 +15,8 @@ setInterval(async () => {
 }, process.env.SCRAPER_INTERVAL || '15m'); // Default to every hour
 
 app.listen(3000);
+// Inside api/index.js
+app.get('/api/data', async (req, res) => {
+  const data = await scraper.scrapeVideoUrls();
+  res.json(data);
+});
